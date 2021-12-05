@@ -29,7 +29,7 @@ async function main(data) {
             '<tr style="border: 1px solid black"><th style="border: 1px solid black">CUSTOMER_STAGE</th><th style="border: 1px solid black; border-collapse: collapse;">'+data.CHECK_CUSTOMER_STAGE+'</th></tr>' +
             '<tr style="border: 1px solid black"><th style="border: 1px solid black">WATCH_STAGE</th><th style="border: 1px solid black; border-collapse: collapse;">'+data.CHECK_WATCH_STAGE+'</th></tr>' +
             '<tr style="border: 1px solid black"><th style="border: 1px solid black">MCOOPCASH_STAGE</th><th style="border: 1px solid black; border-collapse: collapse;">'+data.CHECK_MCOOPCASH_STAGE+'</th></tr>' +
-            '<tr style="border: 1px solid black"><th style="border: 1px solid black">TBL_IPF_DETAILS</th><th style="border: 1px solid black; border-collapse: collapse;">'+data.TBL_IPF_DETAILS+'</th></tr>' +
+            '<tr style="border: 1px solid black"><th style="border: 1px solid black">TBL_IPF_DETAILS</th><th style="border: 1px solid black; border-collapse: collapse;">'+data.CHECK_TBL_IPF_DETAILS+'</th></tr>' +
             '<tr style="border: 1px solid black"><th style="border: 1px solid black">CARDS_STAGE</th><th style="border: 1px solid black; border-collapse: collapse;">'+data.CHECK_CARDS_STAGE+'</th></tr>' +
             '<tr style="border: 1px solid black"><th style="border: 1px solid black">CARDS_WATCH_STAGE</th><th style="border: 1px solid black; border-collapse: collapse;">'+data.CHECK_CARDS_WATCH_STAGE+'</th></tr>' +
             '</table>'
@@ -48,7 +48,9 @@ async function sendEmail() {
     }
 }
 
-cron.schedule("0 7 * * *", function () {
+sendEmail();
+
+/*cron.schedule("0 7 * * *", function () {
     // everyday at 7am
     sendEmail();
-});   
+}); */  

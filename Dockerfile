@@ -1,4 +1,4 @@
-FROM node:17-buster-slim
+FROM node:17.0.1-slim
 
 RUN usermod -aG sudo node
 WORKDIR /home/node/app
@@ -12,4 +12,4 @@ COPY --chown=node . .
 
 CMD ["node", "index.js"]
 
-# docker build -t migutak/dailychecksemail:4.0 .
+# docker build -t migutak/dailychecksemail:4.2 .
