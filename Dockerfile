@@ -12,4 +12,4 @@ COPY --chown=node . .
 
 CMD ["node", "index.js"]
 
-# docker build -t migutak/dailychecksemail:4.2 .
+# docker build -t migutak/dailychecksemail:4.3 .

@@ -20,7 +20,7 @@ async function main(data) {
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"E-Collect" <ecollect@co-opbank.co.ke>' || 'ecollectsystem@gmail.com',
+        from: process.env.SMTPUSER, //'"E-Collect" <ecollect@co-opbank.co.ke>' || 'ecollectsystem@gmail.com',
         to: process.env.TOEMAIL || 'kevin.abongo@royalcyber.com',
         subject: "E-Collect Daily checks - " + new Date(),
         html: "<b>Daily check on below tables today:</b>" +
