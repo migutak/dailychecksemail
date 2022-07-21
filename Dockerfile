@@ -1,6 +1,5 @@
 FROM node:18-alpine3.15
 
-RUN usermod -aG sudo node
 WORKDIR /home/node/app
 
 COPY package*.json ./
