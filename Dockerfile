@@ -1,4 +1,4 @@
-FROM node:17.0.1-slim
+FROM node:18-alpine3.15
 
 RUN usermod -aG sudo node
 WORKDIR /home/node/app
